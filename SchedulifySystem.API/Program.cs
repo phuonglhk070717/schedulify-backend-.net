@@ -27,16 +27,6 @@ builder.Services.AddControllers().ConfigureApiBehaviorOptions(options =>
     };
 });
 
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("app-cors", policy =>
-    {
-        policy
-            .AllowAnyOrigin()
-            .AllowAnyMethod()
-            .AllowAnyHeader();
-    });
-});
 // Add IHttpContextAccessor
 builder.Services.AddHttpContextAccessor();
 // Add Swagger services
